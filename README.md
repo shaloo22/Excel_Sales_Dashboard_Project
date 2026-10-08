@@ -8,8 +8,12 @@ An interactive Excel dashboard that turns raw retail transaction data into an ex
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
+
 ## Dashboard Preview
-Dashboard.png
+
+![Dashboard Screenshot](Dashboard.png)
+
+---
 
 ## Project Overview
 
