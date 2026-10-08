@@ -1,83 +1,98 @@
-# 🛍️ Orbit Mart — Sales & Profitability Dashboard (Excel)
+# Retail Sales & Profitability Dashboard (Excel)
 
-An interactive Excel dashboard analyzing sales, profitability, and regional performance for an outdoor/lifestyle retail business across Europe. Built to practice end-to-end data analysis: cleaning raw data, building Pivot Tables, and designing an executive-level dashboard.
+An interactive Excel dashboard that turns raw retail transaction data into an executive-level view of revenue, profit, and performance by country, region, and sales channel.
+
+> **Note:** "Orbit Mart" is a fictional company and the dataset is simulated for practice. No real company data is used.
 
 ![Excel](https://img.shields.io/badge/Tool-Microsoft_Excel-217346?logo=microsoft-excel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
+## Dashboard Preview
+Dashboard.png
 
-## 📌 Project Overview
+## Project Overview
 
-This project analyzes **2,707 orders** from a multi-country retail business selling outdoor and lifestyle products (Camping, Cycling, Fitness, Hiking, Travel) across **18 European countries**, through multiple sales channels (Online Store, Corporate, Marketplace, Retail Partners).
+The dataset contains **2,707 orders** of outdoor and lifestyle products (Camping, Cycling, Fitness, Hiking, Travel) sold across European countries through four channels: Online Store, Corporate, Marketplace, and Retail Partners.
 
-The goal was to go from a raw transactional dataset to a clean, decision-ready executive dashboard — covering data cleaning, Pivot Table analysis, and dashboard/visualization design.
-
----
-
-## 🎯 Business Questions Answered
-
-- What is the overall revenue, gross profit, and profit margin?
-- How does revenue trend month-over-month?
-- Which countries and regions generate the most revenue?
-- How is revenue distributed across sales channels (Online, Corporate, Marketplace, Retail Partners)?
-- How does performance compare across European regions?
+The goal was to take a raw, messy dataset through the full analyst workflow: cleaning, validation, Pivot Table analysis, and dashboard design.
 
 ---
 
-## 🧰 Tools & Skills Used
+## Key Metrics
 
-| Area | Skills Applied |
+| KPI | Value |
 |---|---|
-| Data Cleaning | Removing duplicates, TRIM/PROPER for text standardization, handling missing values, standardizing date formats |
-| Analysis | Pivot Tables, calculated fields (Gross Profit, Gross Margin %) |
-| Visualization | Pivot Charts (line, bar, pie, donut), Map Chart |
-| Dashboard Design | KPI cards, Slicers (Product Category, Country, Quarter), consistent layout & theming |
-| Excel Features | Excel Tables, structured references, Report Connections (Slicer management) |
+| Total Revenue | $645,223 |
+| Total COGS | $348,839 |
+| Total Gross Profit | $296,384 |
+| Gross Profit Margin | 45.94% |
+| Total Units Sold | 6,698 |
+| Total Orders | 2,707 |
 
 ---
 
-## 📊 Dashboard Features
-
-**KPI Summary Cards**
-- Total Revenue, Total Gross Profit, Gross Profit Margin, Total Units Sold, Total Orders, COGS
+## Dashboard Features
 
 **Visuals**
-- 📈 Monthly Revenue & Gross Profit trend (line chart)
-- 🌍 Top 5 Countries by Revenue (bar chart)
-- 🥧 Revenue Share by Sales Channel (pie chart)
-- 🍩 Region-wise Revenue Comparison (donut chart)
-- 🗺️ Country-wise Revenue Map (filled map chart)
+- Monthly Revenue & Gross Profit trend (line chart, Jan to Dec)
+- Top 5 Countries by Revenue (bar chart)
+- Revenue Share by Sales Channel (pie chart)
+- Region-wise Revenue Comparison (donut chart)
+- Country-wise Revenue Map (filled map chart)
 
 **Interactivity**
-- Slicers for Product Category, Country, and Quarter — all visuals update dynamically
-- Navigation buttons to jump between Dashboard, Pivot Tables, and raw Sales Data sheets
+- Slicers for **Product Category**, **Country**, and **Quarter**; KPI cards and charts update together
+- Navigation buttons to jump to the Pivot Tables and Sales Data sheets
+
+**Design choice:** The *Top 5 Countries* chart is intentionally independent of the Country slicer. It acts as an all-time benchmark, because filtering a "Top 5" chart down to one country would make it meaningless.
 
 ---
 
-## 📁 File Structure (within the workbook)
+## Key Insights
+
+- **Online Store** is the largest channel at 40% of revenue, followed by Corporate (28%), Retail Partners (18%), and Marketplace (14%).
+- **United Kingdom** ($74k) and **Germany** ($70k) lead in revenue, followed by France, Italy, and Spain.
+- **Western Europe** (31%) and **Central Europe** (30%) together generate over 60% of revenue.
+- Revenue peaks in **June ($70k)** and again in **November ($66k)**; the lowest month is **February ($36k)**.
+- Gross profit margin holds at roughly **46%**, indicating healthy profitability.
+
+---
+
+## Data Cleaning & Validation
+
+- Removed duplicate records
+- Standardized text fields (TRIM / PROPER) and date formats
+- Kept missing numeric values blank instead of filling with 0, so averages and sums stay accurate
+- Used an Excel Table as the Pivot source so new rows are picked up automatically
+- Validated KPIs: Revenue − COGS = Gross Profit, and Gross Profit ÷ Revenue = Margin
+- Cross-checked Pivot grand totals against the dashboard KPI cards
+
+---
+
+## Skills Demonstrated
+
+| Area | Details |
+|---|---|
+| Data Cleaning | Duplicates, text standardization, date formats, missing values |
+| Analysis | Pivot Tables, calculated fields, grand-total validation |
+| Visualization | Line, bar, pie, donut, and map charts; custom number formats |
+| Dashboard Design | KPI cards, consistent colour theme, slicers, navigation buttons |
+| Troubleshooting | Slicer connections (Report Connections), independent Pivot caches, chart sorting, data label overlap |
+
+---
+
+## Workbook Structure
 
 | Sheet | Description |
 |---|---|
-| `DashBoard` | Final executive dashboard — KPIs, charts, and slicers |
-| `Pivot Table` | Supporting Pivot Tables (by Month, Channel, Country, Region) feeding the dashboard |
-| `Data` | Cleaned transactional sales data (2,707 rows, 24 columns) |
-
-**Key columns in the dataset:** Order Date, Region, Country, Sales Channel, Customer Type, Product Category, Product, Units Sold, Unit Price, Discount %, Unit Cost, Revenue, COGS, Gross Profit, Gross Margin %.
+| `DashBoard` | Final dashboard with KPIs, charts, and slicers |
+| `Pivot Table` | Pivot Tables that feed each chart and KPI |
+| `Data` | Cleaned transactional data (2,707 rows) |
 
 ---
 
-## 💡 Key Insights
-
-- **Online Store** is the leading sales channel, contributing the largest share of total revenue.
-- **United Kingdom** and **Germany** are the top-performing countries by revenue.
-- **Central Europe** and **Western Europe** regions together drive the majority of sales.
-- Overall **Gross Profit Margin stands at ~46%**, indicating healthy profitability across product lines.
-- Revenue shows a **generally upward trend** across the year, with peak months in mid-to-late year.
-
----
-
-## 🚀 How to Use
+## How to Use
 
 1. Download `Excel_Sales_Dashboard_3(2).xlsx` from this repository.
 2. Open in Microsoft Excel (2016 or later recommended for full chart/slicer support).
@@ -86,7 +101,7 @@ The goal was to go from a raw transactional dataset to a clean, decision-ready e
 
 ---
 
-## 🙋 About This Project
+## About This Project
 
 This project was built as part of my self-learning journey into Data Analytics, focused on strengthening practical Excel skills — data cleaning, Pivot Tables, and dashboard design — for real-world business analysis scenarios.
 
